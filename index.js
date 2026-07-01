@@ -64,3 +64,17 @@ app.command("/jokify-help", async ({ ack, respond }) => {
       await respond({ text: "Failed to fetch a joke." });
     }
   });
+app.command("/jokify-weather",async ({ack,respond})=> {
+    await ack();
+    try {
+        const lat = 50.4452;
+        const lon = -104.6189;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
+        const response = await axios.get(url);
+        const temp = response.data.current.temperature_2m;
+        await respond(`Current temperature in Regina: ${temp}°C`);
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+        await respond("Failed to fetch weather data.");
+    }
+});
