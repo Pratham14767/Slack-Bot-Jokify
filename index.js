@@ -78,3 +78,12 @@ app.command("/jokify-weather",async ({ack,respond})=> {
         await respond("Failed to fetch weather data.");
     }
 });
+app.command("/jokify-fact",async ({ack,respond})=> {
+    await ack();
+    try {
+        const response = await axios.get("https://uselessfacts.jsph.pl/api/v2/facts/random?language=en");
+        await respond({ text: ` Fact:\n${response.data.fact}` });
+    } catch (err) {
+        await respond({ text: "Failed to fetch a  fact." });
+    }
+});
