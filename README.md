@@ -56,7 +56,6 @@ If you want to run your own copy of Jokify locally, follow these steps:
 
 ### 2. Environment Setup & Running
 1. Clone the repository:
-   ```bash
 https://github.com/Pratham14767/Slack-Bot-Jokify.git
    cd Jokify
 
