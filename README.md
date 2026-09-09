@@ -23,7 +23,6 @@ Test the bot live inside the Hack Club Slack workspace:
 | Slash Command | Description | 
 | :--- | :--- |
 | `/jokify-jokes` | Returns a random joke to brighten your day | 
-| `/jokify-fact` | Fetches an interesting random general fact | 
 | `/jokify-catfact` | Get a fun fact about cats | 
 | `/jokify-weather` | Fetches real-time weather reports for a location | 
 | `/jokify-ping` | Health check to confirm if the bot is online | 
