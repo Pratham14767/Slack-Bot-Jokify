@@ -1,6 +1,6 @@
 # Jokify Slack Bot
 
-A 24/7 interactive Slack bot **Jokify** brings entertainment,  facts, and weather information through simple slash commands.
+A fun Slack bot **Jokify** which has features like entertainment,  facts, and weather information through simple slash commands.
 
 Jokify Demo Screenshot
 
@@ -22,7 +22,7 @@ Test the bot live inside the Hack Club Slack workspace:
 
 | Slash Command | Description | 
 | :--- | :--- |
-| `/jokify-joke` | Returns a random joke to brighten your day | 
+| `/jokify-jokes` | Returns a random joke to brighten your day | 
 | `/jokify-fact` | Fetches an interesting random general fact | 
 | `/jokify-catfact` | Get a fun fact about cats | 
 | `/jokify-weather` | Fetches real-time weather reports for a location | 
@@ -30,34 +30,29 @@ Test the bot live inside the Hack Club Slack workspace:
 
 ---
 
-## 🌟 Project Origin & Architecture
+## What is this about?
 
-Jokify was created as part of **Hack Club Stardance SLACK BOT Mission**. It is built using **Node.js** and  **slack** framework to use real-time socket events and slash commands. It is also hosted 24/7 on **Hack Club Nest** containers for 24hours everyday.
+Jokify was created as part of **Hack Club Stardance SLACK BOT Mission**. It is built using **Node.js** and  **slack** framework.It is also hosted 24/7 on **Hack Club Nest** containers for 24hours everyday.
 
 ---
 
-## 🔧 Local Installation & Setup
+## Local Installation & Setup
 
 If you want to run your own copy of Jokify locally, follow these steps:
 
-### Prerequisites
-* [Node.js](https://nodejs.org/) v18 or newer
-* A Slack workspace where you have permission to install apps like Hackclub Slack
+1. Clone the repository: https://github.com/Pratham14767/Slack-Bot-Jokify.git
+2. cd into the project
+3. npm install
+4. set environment variables (create a .env file):
 
-### 1. Slack App Configuration
-1. Go to the [Slack API Console](https://api.slack.com/apps) and create a new app from scratch.
-2. Under **Socket Mode**, toggle **Enable Socket Mode**.
-3. Under **Basic Information → App-Level Tokens**, generate a token with the `connections:write` scope (starts with `xapp-`).
-4. Under **OAuth & Permissions → Bot Token Scopes**, add:
-   * `chat:write`
-   * `commands`
-5. Install the app to your workspace and copy the **Bot User OAuth Token** (starts with `xoxb-`).
-6. Register all 5 slash commands under the **Slash Commands** tab in your Slack app dashboard.
+   SLACK_BOT_TOKEN=your_token
+   
+    SLACK_APP_TOKEN=your_token
+6. run the bot by typing
+node index.js
 
-### 2. Environment Setup & Running
-1. Clone the repository:
-https://github.com/Pratham14767/Slack-Bot-Jokify.git
-   cd Jokify
+---------------------------------------------------------------------------
 
-   ------------------------------------------------------------
-   Ai assistance was used for this Readme.md (Gemini) for formatting the text and few grammar refinements.
+## What did I learn in this Project
+
+I learnt a lot about Api libraries , Slack framework , a bit of python and node also i wrote my one commands and found api for facts which was very fun and exciting also I also learnt how to host your slack bot in nest containers.
